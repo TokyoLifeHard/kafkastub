@@ -7,6 +7,7 @@ public class Message {
     private String data;
 
     public Message() {
+        this.uuid = UUID.randomUUID().toString();
     }
 
     public Message(String data) {
