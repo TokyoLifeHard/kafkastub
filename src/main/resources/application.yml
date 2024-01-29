@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: kafkastub
   kafka:
     consumer:
       auto-offset-reset: earliest
@@ -13,3 +15,9 @@ spring:
       bootstrap-servers: localhost:29092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+management:
+  endpoints.web.exposure.include: 'health,prometheus,metrics'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
